@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lume | Protótipo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Símbolo do Lume, usado via <use href="#lume"> no catálogo e no painel -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="lume" viewBox="14 8 36 51">
+    <circle cx="32" cy="26" r="15" fill="none" stroke="currentColor" stroke-width="6.5"/>
+    <circle cx="26.5" cy="20.5" r="3.6" fill="currentColor"/>
+    <circle cx="37.5" cy="20.5" r="3.6" fill="currentColor"/>
+    <circle cx="26.5" cy="31.5" r="3.6" fill="currentColor"/>
+    <circle cx="37.5" cy="31.5" r="3.6" fill="currentColor"/>
+    <g stroke="currentColor" stroke-width="6.5" stroke-linecap="round">
+      <path d="M25 48.5 H39"/><path d="M27 56.5 H37"/>
+    </g>
+  </symbol>
+</svg>
+
+<!-- Barra de demonstração. Alterna entre quem compra, quem vende e a operação da 42.dev.
+     Não faz parte do produto: sai quando virar sistema de verdade. -->
+<div class="demo">
+  <span class="demo-lbl">Lume . demonstração</span>
+  <div class="demo-grp" role="group" aria-label="Alternar visão">
+    <button class="demo-btn" data-acao="modo" data-v="catalogo" aria-pressed="true">Quem compra</button>
+    <button class="demo-btn" data-acao="modo" data-v="painel" aria-pressed="false">Quem vende</button>
+    <button class="demo-btn" data-acao="modo" data-v="op" aria-pressed="false">42.dev</button>
+  </div>
+</div>
+
+<!-- Todas as telas são desenhadas aqui pelo app.js -->
+<main id="app"></main>
+
+<script src="app.js"></script>
+</body>
+</html>
